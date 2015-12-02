@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="conFlowerNamespace"
+           xmlns:vp="visParNamespace"
+           xmlns:at="attributesNamespace"
+           elementFormDefault="qualified">
+
+    <xs:import schemaLocation="FlowerXSDVisPar.xsd"
+                   namespace="visParNamespace"/>
+   
+    <xs:import schemaLocation="FlowerXSDAttributes.xsd"
+               namespace="attributesNamespace"/>
+	
+    <xs:complexType name="ConFlower">
+        <xs:sequence>
+            
+            <!--Type of soil-->
+            <xs:element name="soil">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="podzolic" />
+                        <xs:enumeration value="ground" />
+                        <xs:enumeration value="sod-podzolic" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            
+            <!--Type of origin-->
+            <xs:element name="origin" type="xs:string" />
+            
+            <!--Type of visual parameters-->
+            <xs:element name="visualParameters" type="vp:VisPar" />
+            
+            <!--Type of growing tips-->
+            <xs:element name="growingTips">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="temperature" type="xs:float"/>
+                        <xs:element name="photophilous">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="yes" />
+                                    <xs:enumeration value="no" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="watering" type="xs:integer"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            
+            <!--Type of multypyling-->
+            <xs:element name="multiplying">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="leaf" />
+                        <xs:enumeration value="stem" />
+                        <xs:enumeration value="seed" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+        </xs:sequence>
+        <xs:attribute name="name" type="at:FlowerName" use="required" />
+        <xs:attribute name="quantity" type="at:Qnt" use="required" />
+    </xs:complexType>
+    
+</xs:schema>

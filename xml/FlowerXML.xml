@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<f:Flower
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='flowerNamespace FlowerXSD.xsd'
+    xmlns:f='flowerNamespace'
+	xmlns:cf="conFlowerNamespace"
+	xmlns:vp="visParNamespace">
+    
+    <f:concreteFlower name="Sunflower" quantity="3">
+        <cf:soil>podzolic</cf:soil>
+        <cf:origin>Ukraine</cf:origin>
+        <cf:visualParameters>
+            <vp:stem>
+                <vp:r>0</vp:r>
+                <vp:g>0</vp:g>
+                <vp:b>0</vp:b>
+            </vp:stem>
+            <vp:leaf>
+                <vp:r>200</vp:r>
+                <vp:g>200</vp:g>
+                <vp:b>200</vp:b>
+            </vp:leaf>
+            <vp:size>3.17</vp:size>
+        </cf:visualParameters>
+        <cf:growingTips>
+            <cf:temperature>20.0</cf:temperature>
+            <cf:photophilous>yes</cf:photophilous>
+            <cf:watering>2500</cf:watering>
+        </cf:growingTips>
+        <cf:multiplying>stem</cf:multiplying>
+    </f:concreteFlower>
+    
+    <f:concreteFlower name="Rose" quantity="5">
+        <cf:soil>sod-podzolic</cf:soil>
+        <cf:origin>England</cf:origin>
+        <cf:visualParameters>
+            <vp:stem>
+                <vp:r>0</vp:r>
+                <vp:g>255</vp:g>
+                <vp:b>0</vp:b>
+            </vp:stem>
+            <vp:leaf>
+                <vp:r>255</vp:r>
+                <vp:g>0</vp:g>
+                <vp:b>0</vp:b>
+            </vp:leaf>
+            <vp:size>2.44</vp:size>
+        </cf:visualParameters>
+        <cf:growingTips>
+            <cf:temperature>30.0</cf:temperature>
+            <cf:photophilous>yes</cf:photophilous>
+            <cf:watering>5000</cf:watering>
+        </cf:growingTips>
+        <cf:multiplying>leaf</cf:multiplying>
+    </f:concreteFlower>
+    
+    <f:concreteFlower name="Dahlia" quantity="7">
+        <cf:soil>ground</cf:soil>
+        <cf:origin>Germany</cf:origin>
+        <cf:visualParameters>
+            <vp:stem>
+                <vp:r>200</vp:r>
+                <vp:g>11</vp:g>
+                <vp:b>53</vp:b>
+            </vp:stem>
+            <vp:leaf>
+                <vp:r>28</vp:r>
+                <vp:g>121</vp:g>
+                <vp:b>212</vp:b>
+            </vp:leaf>
+            <vp:size>0.71</vp:size>
+        </cf:visualParameters>
+        <cf:growingTips>
+            <cf:temperature>21.5</cf:temperature>
+            <cf:photophilous>no</cf:photophilous>
+            <cf:watering>3000</cf:watering>
+        </cf:growingTips>
+        <cf:multiplying>seed</cf:multiplying>
+    </f:concreteFlower>
+
+    <f:concreteFlower name="Aster" quantity="9">
+        <cf:soil>podzolic</cf:soil>
+        <cf:origin>Italy</cf:origin>
+        <cf:visualParameters>
+            <vp:stem>
+                <vp:r>189</vp:r>
+                <vp:g>59</vp:g>
+                <vp:b>9</vp:b>
+            </vp:stem>
+            <vp:leaf>
+                <vp:r>128</vp:r>
+                <vp:g>255</vp:g>
+                <vp:b>34</vp:b>
+            </vp:leaf>
+            <vp:size>0.82</vp:size>
+        </cf:visualParameters>
+        <cf:growingTips>
+            <cf:temperature>27.7</cf:temperature>
+            <cf:photophilous>yes</cf:photophilous>
+            <cf:watering>4200</cf:watering>
+        </cf:growingTips>
+        <cf:multiplying>stem</cf:multiplying>
+    </f:concreteFlower>
+    
+</f:Flower>

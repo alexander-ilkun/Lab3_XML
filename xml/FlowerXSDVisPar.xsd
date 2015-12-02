@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="visParNamespace"
+           xmlns:tns="visParNamespace"
+		   elementFormDefault="qualified">
+
+    <xs:simpleType name="OneColor">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="FullColor">
+        <xs:sequence>
+          <xs:element name="r" type="tns:OneColor"/>
+          <xs:element name="g" type="tns:OneColor"/>
+          <xs:element name="b" type="tns:OneColor"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="VisPar">
+        <xs:sequence>
+            <xs:element name="stem" type="tns:FullColor"/>
+            <xs:element name="leaf" type="tns:FullColor"/>
+            <xs:element name="size" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

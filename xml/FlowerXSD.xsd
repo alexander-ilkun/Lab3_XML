@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="flowerNamespace"
+           xmlns:cf="conFlowerNamespace"
+		   elementFormDefault="qualified">
+
+	<xs:import schemaLocation="FlowerXSDConFlower.xsd"
+		   namespace="conFlowerNamespace"/>
+	
+	<xs:element name="Flower">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="concreteFlower" type="cf:ConFlower" minOccurs="1"
+                         maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
